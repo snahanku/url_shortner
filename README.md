@@ -166,6 +166,34 @@ EHere’s a more professional version of your text, polished for clarity and rea
 
 
 
+Got it ✅ — here’s a crisp, professional, **GitHub-ready version**:
+
+---
+
+### Additional Features
+
+**📊 Analytics – First & Last Click Tracking**
+
+* Tracks the **first** and **last click** for each shortened URL.
+* Implemented using a **decorator**, making it reusable across endpoints (e.g., `/short`, `/scrape`).
+* Stores **human-readable timestamps** in the database.
+
+**How it works:**
+
+* Decorator wraps the endpoint.
+* Records the first click (if not already set).
+* Updates the last click on every access.
+
+**Example:** <img width="630" height="478" alt="decorator-example" src="https://github.com/user-attachments/assets/7f45ea29-0f4d-40f0-b435-49b6ea98bd4b" />
+
+**Usage:** <img width="947" height="103" alt="usage-example" src="https://github.com/user-attachments/assets/d427bcf3-2ab9-4ce4-a419-df8d61c1b7c9" />
+
+---
+
+Want me to also **add a short code snippet** (instead of just screenshots) so it looks cleaner in your GitHub README?
+
+  
+
 
        
 
