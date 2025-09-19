@@ -36,32 +36,29 @@ Getting Started:-
      <img width="680" height="127" alt="image" src="https://github.com/user-attachments/assets/6afe9044-42b2-42b8-b108-d31e7884a770" />
 
    code :
-          git clone https://github.com/snahanku/url_shortner.git
+
+         git clone https://github.com/snahanku/url_shortner.git
    
           cd url_shortner
 
-2.  Create a Python Virtual Environment:
+3.  Create a Python Virtual Environment:
      It's a best practice to use a virtual environment to manage project dependencies.
 
-    <img width="693" height="112" alt="image" src="https://github.com/user-attachments/assets/6a001a3b-c45b-419e-8774-f2fce59438a1" />
-
-    code:
+ 
+    
           python -m venv .venv
 
-3.  Activate the Virtual Environment:
+5.  Activate the Virtual Environment:
    
      --> on Windows ,
     
-          <img width="655" height="102" alt="image" src="https://github.com/user-attachments/assets/d183f45a-75c0-44e8-baba-80c3806cde3d" />
-
-      code :
+    
               .venv\Scripts\activate
 
     -->  on mac/linux ,
     
-          <img width="652" height="117" alt="image" src="https://github.com/user-attachments/assets/2efd44c8-4eec-4da6-bac5-2593cf825b0c" />
-
-      code :
+          
+    
                source .venv/bin/activate
 
 
@@ -69,10 +66,8 @@ Getting Started:-
     
      All project dependencies are listed in requirements.txt.
 
-    <img width="689" height="119" alt="image" src="https://github.com/user-attachments/assets/f2fc902b-dd12-4cda-b6e6-a15165fded41" />
-
-
-    code :
+    
+    
             pip install -r requirements.txt
 
 
@@ -114,6 +109,14 @@ Getting Started:-
 
 
      The interface will look like this :
+
+     Link :
+             https://url-shortner-web-service.onrender.com
+
+    Note : // disclaimer //
+
+
+    
         
 
 
