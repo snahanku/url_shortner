@@ -9,7 +9,7 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
 from functools import wraps
-
+import os
 #-------Imports for scraping web images-----#
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -19,6 +19,7 @@ from selenium.webdriver.support import expected_conditions as EC
 #---------------------------------------------------
 app = FastAPI()
 
+MONGO_URI = os.getenv("MONGO_URI")
 
 class Url(BaseModel):
     url: str
