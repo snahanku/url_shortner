@@ -50,13 +50,15 @@ Getting Started:-
 
 3.  Activate the Virtual Environment:
    
-     --> on Windows , 
+     --> on Windows ,
+    
           <img width="655" height="102" alt="image" src="https://github.com/user-attachments/assets/d183f45a-75c0-44e8-baba-80c3806cde3d" />
 
       code :
               .venv\Scripts\activate
 
     -->  on mac/linux ,
+    
           <img width="652" height="117" alt="image" src="https://github.com/user-attachments/assets/2efd44c8-4eec-4da6-bac5-2593cf825b0c" />
 
       code :
@@ -108,7 +110,7 @@ Getting Started:-
 
       The hosted link :
 
-       https://url-shortner-web-service.onrender.com/
+       
 
 
      The interface will look like this :
