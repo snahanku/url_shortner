@@ -166,33 +166,29 @@ EHere’s a more professional version of your text, polished for clarity and rea
 
 
 
-Got it ✅ — here’s a crisp, professional, **GitHub-ready version**:
-
----
 
 ### Additional Features
 
-**📊 Analytics – First & Last Click Tracking**
+**Analytics: First and Last Click Tracking**
 
-* Tracks the **first** and **last click** for each shortened URL.
-* Implemented using a **decorator**, making it reusable across endpoints (e.g., `/short`, `/scrape`).
-* Stores **human-readable timestamps** in the database.
+An analytics feature has been implemented to record the **first click** and **last click** for each shortened URL.
 
-**How it works:**
+This functionality is designed using a **decorator pattern**, making it reusable across multiple endpoints. While primarily applied to shortened URLs, it can also be extended to the scraping endpoint (or others, if required). Each time a user accesses the link, the decorator ensures that both the first and most recent clicks are captured and stored.
 
-* Decorator wraps the endpoint.
-* Records the first click (if not already set).
-* Updates the last click on every access.
+The stored data includes **human-readable timestamps**, which are persisted in the database for reference.
 
-**Example:** <img width="630" height="478" alt="decorator-example" src="https://github.com/user-attachments/assets/7f45ea29-0f4d-40f0-b435-49b6ea98bd4b" />
+**Implementation Overview:**
 
-**Usage:** <img width="947" height="103" alt="usage-example" src="https://github.com/user-attachments/assets/d427bcf3-2ab9-4ce4-a419-df8d61c1b7c9" />
+* The decorator wraps the target endpoint.
+* On each request, it checks and records the first click if not already stored.
+* The last click timestamp is updated with every access.
 
----
+Below are glimpses of the implementation:
 
-Want me to also **add a short code snippet** (instead of just screenshots) so it looks cleaner in your GitHub README?
+📌 **Decorator Implementation Example** <img width="630" height="478" alt="image" src="https://github.com/user-attachments/assets/7f45ea29-0f4d-40f0-b435-49b6ea98bd4b" />
 
-  
+📌 **Usage Snippet** <img width="947" height="103" alt="image" src="https://github.com/user-attachments/assets/d427bcf3-2ab9-4ce4-a419-df8d61c1b7c9" />
+
 
 
        
