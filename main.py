@@ -20,7 +20,7 @@ from selenium.webdriver.support import expected_conditions as EC
 #---------------------------------------------------
 app = FastAPI()
 
-MONGO_URI = os.getenv("MONGO_URI")
+
 
 class Url(BaseModel):
     url: str
@@ -38,23 +38,22 @@ class Url(BaseModel):
 
 
 MONGO_URI = os.getenv("MONGO_URI")
-
-# Add a check to ensure the environment variable is set
 if not MONGO_URI:
     raise ValueError("MONGO_URI environment variable is not set on Render.")
 
-client = MongoClient(MONGO_URI)
-
 try:
-    # A quick way to check if the connection is working
-    client.admin.command('ismaster')
+    client = MongoClient(MONGO_URI)
+    client.admin.command("ping")  # test connection
     print("MongoDB connection successful!")
-except ConnectionFailure:
-    print("MongoDB connection failed!")
-    client = None
+except Exception as e:
+    raise RuntimeError(f" MongoDB connection failed: {e}")
 
-db = client["url_shortener"] if client else None
-collection = db["urls"] if db else None
+db = client["url_shortener"]   # no truthy check, just use it
+collection = db["urls"]
+
+if collection is None:
+    raise RuntimeError("MongoDB collection not initialized. Check DB name and collection.")
+
 
 
 #----------------------------------------------------------
