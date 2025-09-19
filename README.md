@@ -281,10 +281,6 @@ Here’s a **refined, professional, and GitHub-ready version** of your text:
 
 **Response:** <img width="1487" height="793" alt="image" src="https://github.com/user-attachments/assets/53da306c-299b-4f91-a541-13d6bdd087ed" />
 
----
-
-Would you like me to **convert this into a neatly formatted README section with collapsible `<details>` blocks** for each endpoint, so your GitHub page looks cleaner?
-
 
 
     
