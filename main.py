@@ -42,7 +42,7 @@ if not MONGO_URI:
     raise ValueError("MONGO_URI environment variable is not set on Render.")
 
 try:
-    client = MongoClient(MONGO_URI)
+    client = MongoClient(MONGO_URI ,  serverSelectionTimeoutMS=5000)
     client.admin.command("ping")  # test connection
     print("MongoDB connection successful!")
 except Exception as e:
