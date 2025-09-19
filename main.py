@@ -26,15 +26,7 @@ class Url(BaseModel):
     url: str
 
 #--------------DataBase  connection --------------------
-#try:
-    #client = MongoClient("mongodb://localhost:27017", serverSelectionTimeoutMS=5000)
-    #client.admin.command('ping') # check to see if server is available or not
-    #db = client["url_shortener"]
-    #collection = db["urls"]
-    #print("Successfully connected to MongoDB!")
-#except ConnectionFailure as e:
-    #print(f"Failed to connect to MongoDB: {e}")
-    #collection = None
+
 
 
 MONGO_URI = os.getenv("MONGO_URI")
