@@ -10,6 +10,7 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 from functools import wraps
 import os
+from pymongo.errors import ConnectionFailure
 #-------Imports for scraping web images-----#
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -25,15 +26,37 @@ class Url(BaseModel):
     url: str
 
 #--------------DataBase  connection --------------------
+#try:
+    #client = MongoClient("mongodb://localhost:27017", serverSelectionTimeoutMS=5000)
+    #client.admin.command('ping') # check to see if server is available or not
+    #db = client["url_shortener"]
+    #collection = db["urls"]
+    #print("Successfully connected to MongoDB!")
+#except ConnectionFailure as e:
+    #print(f"Failed to connect to MongoDB: {e}")
+    #collection = None
+
+
+MONGO_URI = os.getenv("MONGO_URI")
+
+# Add a check to ensure the environment variable is set
+if not MONGO_URI:
+    raise ValueError("MONGO_URI environment variable is not set on Render.")
+
+client = MongoClient(MONGO_URI)
+
 try:
-    client = MongoClient("mongodb://localhost:27017", serverSelectionTimeoutMS=5000)
-    client.admin.command('ping') # check to see if server is available or not
-    db = client["url_shortener"]
-    collection = db["urls"]
-    print("Successfully connected to MongoDB!")
-except ConnectionFailure as e:
-    print(f"Failed to connect to MongoDB: {e}")
-    collection = None
+    # A quick way to check if the connection is working
+    client.admin.command('ismaster')
+    print("MongoDB connection successful!")
+except ConnectionFailure:
+    print("MongoDB connection failed!")
+    client = None
+
+db = client["url_shortener"] if client else None
+collection = db["urls"] if db else None
+
+
 #----------------------------------------------------------
 
 
