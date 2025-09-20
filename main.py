@@ -17,9 +17,11 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from dotenv  import load_dotenv
 #---------------------------------------------------
-app = FastAPI()
 
+app = FastAPI()
+load_dotenv()
 
 
 class Url(BaseModel):
