@@ -121,6 +121,7 @@ The API will be available at:
 ## 🌍 Hosted Version
 
 The project is also deployed on Render:
+
 🔗 Link:   https://url-shortner-web-service.onrender.com
 
 Example interface: <img width="1919" height="214" alt="image" src="https://github.com/user-attachments/assets/4a79be9a-e53a-44d6-b269-684538923536" />
