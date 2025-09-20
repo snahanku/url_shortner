@@ -48,9 +48,6 @@ Before setting up the project, ensure the following are installed on your local 
 git clone https://github.com/snahanku/url_shortner.git
 cd url_shortner
 ```
-
-<img width="680" height="127" alt="image" src="https://github.com/user-attachments/assets/6afe9044-42b2-42b8-b108-d31e7884a770" />  
-
 ---
 
 #### 2. Create a Python Virtual Environment
